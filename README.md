@@ -1,5 +1,5 @@
-# What is iHosts
-A tool for updating the hosts file
+# What is icrawler
+Configurable Crawler Created Based on Chromedp (Lite Version)
 
 ## How To Use ?
 - `go mod tidy`
