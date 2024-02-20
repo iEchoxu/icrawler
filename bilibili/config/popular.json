@@ -1,0 +1,25 @@
+{
+  "project_name": "bilibili",
+  "spider_name": "popular_rank",
+  "start_urls": {
+    "url": "https://www.bilibili.com/v/popular/rank/all",
+    "follow": true,
+    "html_content_xpath": "document.getElementsByClassName('rank-list')",
+    "restrict_xpath": "//*[@class='rank-list']/li",
+    "links_xpath": "//a[@class='title']//@href"
+  },
+  "item": "PopularRank",
+  "selectors": {
+    "root": "document.querySelectorAll('#mirror-vdcon')",
+    "title": "//div[@id='mirror-vdcon']//h1/text()",
+    "author": "//div[@id='mirror-vdcon']//div[@class='up-detail-top']/a[1]/text()",
+    "view_counts": "//div[@id='mirror-vdcon']//div[@class='video-info-detail-list']/span[1]/text()",
+    "danmu_counts": "//div[@id='mirror-vdcon']//div[@class='video-info-detail-list']/span[2]/text()",
+    "video_like": "//div[@id='mirror-vdcon']//div[@id='arc_toolbar_report']//div[@title='点赞（Q）']//span/text()",
+    "video_coin": "//div[@id='mirror-vdcon']//div[@id='arc_toolbar_report']//div[@title='投币（W）']//span/text()",
+    "video_favorite": "//div[@id='mirror-vdcon']//div[@id='arc_toolbar_report']//div[@title='收藏（E）']//span/text()",
+    "video_share": "//div[@id='arc_toolbar_report']//span[contains(@class,'video-share-info')]/text()"
+  },
+  "max_request": 10,
+  "timeout": 3
+}

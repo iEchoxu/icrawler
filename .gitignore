@@ -1,0 +1,7 @@
+dist
+.idea/
+.goreleaser.yaml
+main.exe
+main
+publish_token
+icrawler.exe
